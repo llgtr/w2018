@@ -1,0 +1,228 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', sans-serif;
+}
+
+:root {
+    --theme01: #DC4C46;
+    --theme02: #808080;
+    --theme03: #F3D6E4;
+    --theme04: #E8B0CB;
+    --theme05: #811C18;
+    --theme06: #D62F29;
+    --theme07: #AB2521;
+    --lightbg: #E6E6E6;
+}
+
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+}
+
+.btn {
+    background-color: white;
+    border-style: solid;
+    border-color: var(--theme01);
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.card {
+    background-color: white;
+    border-style: solid;
+    border-color: var(--theme01);
+    border-radius: 10px;
+    border-width: 1px;
+    box-shadow: 0px 0px 10px grey;
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+    overflow: auto;
+    max-height: 65vh;
+}
+
+.btn-borderless.padded {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+.btn-borderless:hover {
+    background-color: var(--theme06);
+}
+
+.btn-borderless:active {
+    background-color: var(--theme07);
+}
+
+/* Location-selector */
+
+.locations-main-container {
+    position: absolute;
+    z-index: 500;
+    top: 5vh;
+    left: 5vw;
+    width: 15vw;
+    padding: 20px;
+}
+
+.locations-title {
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.btn-location {
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    transition: background-color .3s ease;
+}
+
+.btn-location:hover {
+    background-color: var(--theme03);
+}
+
+.btn-location:active {
+    background-color: var(--theme04);
+}
+
+.coordinates {
+    font-size: 0.7em;
+    color: var(--theme02);
+}
+
+.btn-add {
+    color: black;
+    width: 100vw;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+.btn-add:hover {
+    color: var(--theme01);
+}
+
+.btn-add:active {
+    color: var(--theme05);
+}
+
+.btn-add.right {
+    padding: 0px 0px 0px 10px;
+    border-left: 1px solid #808080;
+}
+
+.btn-add.left {
+    padding: 0px 10px 0px 0px;
+    border-right: 1px solid #808080;
+}
+
+/* Component for showing the latest observation and the lowest and highest
+   temperature of the past 24 hours*/
+
+.ticker {
+    z-index: 500;
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+}
+
+.readout {
+    padding: 10px 20px 10px 20px;
+}
+
+.temp {
+    color: var(--theme02);
+    font-size: 1.3em;
+}
+
+/* Component for showing observations for each location */
+
+.observations-main {
+    position: absolute;
+    z-index: 500;
+    top: 15vh;
+    right: 5vw;
+    width: 15vw;
+    max-width: 25vw;
+    max-height: 50vh;
+}
+
+.observation-li {
+    margin: 10px;
+}
+
+.timestamp {
+    font-size: 70%;
+    color: var(--theme02);
+}
+
+/* Modals */
+
+.modal {
+    position: absolute;
+    top: 20%;
+    z-index: 1200;
+    width: 20%;
+    padding: 30px;
+}
+
+input {
+    padding: 3px;
+    margin: 5px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-color: var(--theme02);
+    transition: border-color .5s ease;
+}
+
+input:focus {
+    border-color: var(--theme01);
+}
+
+.btn-borderless {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--theme01);
+    color: white;
+}
+
+.invalid {
+    color: var(--theme01);
+}
+
+.dimmer {
+    position: absolute;
+    z-index: 1100;
+    background-color: black;
+    opacity: 0.8;
+    height: 100vh;
+    width: 100vw;
+}
